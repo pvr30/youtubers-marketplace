@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<main class="contact-us">
+    <div class="banner">
+      <img src="{% static './assets/images/bg-banner.png' %}" alt="" class="img-fluid w-100">
+      <h1 class="text-center">
+        Services
+      </h1>
+    </div>
+    <section class="container mt-5 mb-5">
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <img src="{% static './assets/images/banner1.png' %}" alt="" class="img-fluid" style="height: 200px;">
+        </div>
+        <div class="col-md-8 animate__animated animate__fadeInRight">
+          <!-- <h2 class="text-center">About Project</h2> -->
+          <p style="font-size: 35px;">
+              <b>Invite Youtubes For Events</b> 
+          </p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        
+        <div class="col-md-8  animate__animated animate__fadeInLeft  animate__delay-1s">
+          <!-- <h2 class="text-center">About Project</h2> -->
+          <p style="font-size: 35px;">
+              <b>Invite Youtubes For Product Launch</b> 
+          </p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static './assets/images/banner2.png' %}" alt="" class="img-fluid" style="height: 200px;">
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-4">
+            <img src="{% static './assets/images/banner3.png' %}" alt="" class="img-fluid" style="height: 200px;">
+          </div>
+        <div class="col-md-8  animate__animated animate__fadeInLeft  animate__delay-1s">
+          <!-- <h2 class="text-center">About Project</h2> -->
+          <p style="font-size: 35px;">
+              <b>Invite Youtubes For Charity Events</b> 
+          </p>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+{% endblock %}

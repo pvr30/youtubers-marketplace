@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<main class="contact-us">
+    <div class="banner">
+      <img src="{% static './assets/images/bg-banner.png' %}" alt="" class="img-fluid w-100">
+      <h1 class="text-center">
+        Dashboard
+      </h1>
+    </div>
+
+    <section class="container mt-5">
+      <h2 class="text-center">Welcome to Dashboard</h2>
+      <h4 class="text-center text-white-50">
+        hi, {{user.username}} Hope you are having a good day
+      </h4>
+
+      <div class="table-responsive- mt-3">
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">YTuber_ID</th>
+              <th scope="col">YTubers_name</th>
+              <th scope="col">City</th>
+              <th scope="col">Visit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for ht in hiretuber %}
+            <tr>
+              {% if ht.email == user.email %}
+              <th scope="row">{{ht.id}}</th>
+              <td>{{ht.tuber_name}}</td>
+              <td>{{ht.city}}</td>
+              <td>
+                <div class="btn btn-accent">
+                  <a href="{% url 'youtuber_detail' ht.tuber_id %}">Visit</a>
+                </div>
+              </td>
+              {% endif %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+
+
+{% endblock %}
